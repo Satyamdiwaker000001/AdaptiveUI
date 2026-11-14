@@ -1,0 +1,42 @@
+{
+  "name": "@adaptiveui/core",
+  "version": "0.0.1",
+  "description": "Foundational design tokens, utilities, and styling layer for AdaptiveUI",
+  "type": "module",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./tokens.css": "./styles/tokens.css",
+    "./utilities.css": "./styles/utilities.css",
+    "./styles.css": "./styles/styles.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "styles",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test tests/**/*.test.js"
+  },
+  "keywords": [
+    "adaptiveui",
+    "design-tokens",
+    "css",
+    "utilities",
+    "ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
+
