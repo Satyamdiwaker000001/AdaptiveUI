@@ -1,0 +1,81 @@
+/**
+ * AdaptiveUI Shared CSS Utilities
+ *
+ * Scoped within @layer aui.utilities.
+ * All class selectors use the `aui-` prefix.
+ * Zero element-level selectors or wildcard resets.
+ */
+
+@layer aui.tokens, aui.components, aui.utilities;
+
+@layer aui.utilities {
+  /* ==========================================================================
+     Accessibility Utilities
+     ========================================================================== */
+
+  /**
+   * Visually hide an element while maintaining screen reader accessibility.
+   * Essential for accessible icon buttons, status indicators, and skip-links.
+   */
+  .aui-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /**
+   * Revert visual hiding when an element receives keyboard focus (e.g. skip links).
+   */
+  .aui-sr-only-focusable:focus,
+  .aui-sr-only-focusable:focus-visible {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* ==========================================================================
+     Focus Ring Helper Utility
+     ========================================================================== */
+
+  /**
+   * Standardized accessible focus ring matching library tokens.
+   */
+  .aui-focus-ring:focus-visible {
+    outline: 2px solid var(--aui-color-focus-border, #2563eb);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px var(--aui-color-focus-ring, rgba(37, 99, 235, 0.25));
+  }
+
+  /* ==========================================================================
+     Layout & Content Helpers
+     ========================================================================== */
+
+  /**
+   * Truncate text with an ellipsis on overflow.
+   */
+  .aui-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /**
+   * Disable user text selection.
+   */
+  .aui-user-select-none {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+

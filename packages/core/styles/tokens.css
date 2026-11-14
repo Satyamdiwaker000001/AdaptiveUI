@@ -1,0 +1,220 @@
+/**
+ * AdaptiveUI Design Tokens
+ * Prefix: --aui-
+ *
+ * Scoped to @layer aui.tokens.
+ * No global resets or bare HTML element styling.
+ * Opt-in by importing this stylesheet.
+ */
+
+@layer aui.tokens {
+  /* ==========================================================================
+     Base Design Tokens (Global, Scale & Shared Values)
+     ========================================================================== */
+  :root {
+    /* ------------------------------------------------------------------------
+       1. Colors: Base Gray Scale (Neutral)
+       ------------------------------------------------------------------------ */
+    --aui-color-gray-50: #f9fafb;
+    --aui-color-gray-100: #f3f4f6;
+    --aui-color-gray-200: #e5e7eb;
+    --aui-color-gray-300: #d1d5db;
+    --aui-color-gray-400: #9ca3af;
+    --aui-color-gray-500: #6b7280;
+    --aui-color-gray-600: #4b5563;
+    --aui-color-gray-700: #374151;
+    --aui-color-gray-800: #1f2937;
+    --aui-color-gray-900: #111827;
+    --aui-color-gray-950: #030712;
+
+    /* ------------------------------------------------------------------------
+       1. Colors: Semantic Statuses & Brand Intent
+       ------------------------------------------------------------------------ */
+    /* Primary */
+    --aui-color-primary: #2563eb;
+    --aui-color-primary-hover: #1d4ed8;
+    --aui-color-primary-active: #1e40af;
+    --aui-color-primary-contrast: #ffffff;
+    --aui-color-primary-subtle: #eff6ff;
+
+    /* Success */
+    --aui-color-success: #16a34a;
+    --aui-color-success-hover: #15803d;
+    --aui-color-success-active: #166534;
+    --aui-color-success-contrast: #ffffff;
+    --aui-color-success-subtle: #f0fdf4;
+
+    /* Warning */
+    --aui-color-warning: #d97706;
+    --aui-color-warning-hover: #b45309;
+    --aui-color-warning-active: #92400e;
+    --aui-color-warning-contrast: #ffffff;
+    --aui-color-warning-subtle: #fffbeb;
+
+    /* Danger */
+    --aui-color-danger: #dc2626;
+    --aui-color-danger-hover: #b91c1c;
+    --aui-color-danger-active: #991b1b;
+    --aui-color-danger-contrast: #ffffff;
+    --aui-color-danger-subtle: #fef2f2;
+
+    /* Info */
+    --aui-color-info: #0284c7;
+    --aui-color-info-hover: #0369a1;
+    --aui-color-info-active: #075985;
+    --aui-color-info-contrast: #ffffff;
+    --aui-color-info-subtle: #f0f9ff;
+
+    /* ------------------------------------------------------------------------
+       2. Typography
+       ------------------------------------------------------------------------ */
+    --aui-font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --aui-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+    /* Font Sizes */
+    --aui-font-size-xs: 0.75rem;    /* 12px */
+    --aui-font-size-sm: 0.875rem;   /* 14px */
+    --aui-font-size-md: 1rem;       /* 16px */
+    --aui-font-size-lg: 1.125rem;   /* 18px */
+    --aui-font-size-xl: 1.25rem;    /* 20px */
+    --aui-font-size-2xl: 1.5rem;    /* 24px */
+    --aui-font-size-3xl: 1.875rem;  /* 30px */
+
+    /* Font Weights */
+    --aui-font-weight-regular: 400;
+    --aui-font-weight-medium: 500;
+    --aui-font-weight-semibold: 600;
+    --aui-font-weight-bold: 700;
+
+    /* Line Heights */
+    --aui-line-height-none: 1;
+    --aui-line-height-tight: 1.25;
+    --aui-line-height-normal: 1.5;
+    --aui-line-height-relaxed: 1.75;
+
+    /* ------------------------------------------------------------------------
+       3. Spacing
+       ------------------------------------------------------------------------ */
+    --aui-space-0: 0;
+    --aui-space-1: 0.25rem;   /* 4px */
+    --aui-space-2: 0.5rem;    /* 8px */
+    --aui-space-3: 0.75rem;   /* 12px */
+    --aui-space-4: 1rem;      /* 16px */
+    --aui-space-5: 1.25rem;   /* 20px */
+    --aui-space-6: 1.5rem;    /* 24px */
+    --aui-space-8: 2rem;      /* 32px */
+    --aui-space-10: 2.5rem;   /* 40px */
+    --aui-space-12: 3rem;     /* 48px */
+    --aui-space-16: 4rem;     /* 64px */
+
+    /* ------------------------------------------------------------------------
+       4. Border Radius
+       ------------------------------------------------------------------------ */
+    --aui-radius-none: 0;
+    --aui-radius-sm: 0.125rem;  /* 2px */
+    --aui-radius-md: 0.25rem;   /* 4px */
+    --aui-radius-lg: 0.5rem;    /* 8px */
+    --aui-radius-xl: 0.75rem;   /* 12px */
+    --aui-radius-full: 9999px;
+
+    /* ------------------------------------------------------------------------
+       5. Shadows
+       ------------------------------------------------------------------------ */
+    --aui-shadow-none: none;
+    --aui-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --aui-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --aui-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --aui-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+    /* ------------------------------------------------------------------------
+       6. Breakpoints (Documented Design Values)
+       ------------------------------------------------------------------------ */
+    --aui-breakpoint-sm: 640px;
+    --aui-breakpoint-md: 768px;
+    --aui-breakpoint-lg: 1024px;
+    --aui-breakpoint-xl: 1280px;
+    --aui-breakpoint-2xl: 1536px;
+
+    /* ------------------------------------------------------------------------
+       7. Transitions & Motion
+       ------------------------------------------------------------------------ */
+    --aui-duration-fast: 150ms;
+    --aui-duration-normal: 250ms;
+    --aui-duration-slow: 350ms;
+    --aui-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* ==========================================================================
+     Light Theme Token Definitions (Default Surface Scheme)
+     ========================================================================== */
+  :root,
+  [data-aui-theme="light"],
+  .aui-theme-light {
+    --aui-color-bg: #ffffff;
+    --aui-color-bg-subtle: var(--aui-color-gray-50);
+    --aui-color-bg-muted: var(--aui-color-gray-100);
+    --aui-color-surface: #ffffff;
+    --aui-color-surface-hover: var(--aui-color-gray-50);
+    --aui-color-text: var(--aui-color-gray-900);
+    --aui-color-text-muted: var(--aui-color-gray-500);
+    --aui-color-text-disabled: var(--aui-color-gray-400);
+    --aui-color-border: var(--aui-color-gray-200);
+    --aui-color-border-subtle: var(--aui-color-gray-100);
+    --aui-color-border-hover: var(--aui-color-gray-300);
+    --aui-color-focus-ring: rgba(37, 99, 235, 0.25);
+    --aui-color-focus-border: var(--aui-color-primary);
+  }
+
+  /* ==========================================================================
+     Dark Theme Token Definitions
+     ========================================================================== */
+  [data-aui-theme="dark"],
+  .aui-theme-dark {
+    --aui-color-bg: var(--aui-color-gray-950);
+    --aui-color-bg-subtle: var(--aui-color-gray-900);
+    --aui-color-bg-muted: var(--aui-color-gray-800);
+    --aui-color-surface: var(--aui-color-gray-900);
+    --aui-color-surface-hover: var(--aui-color-gray-800);
+    --aui-color-text: var(--aui-color-gray-50);
+    --aui-color-text-muted: var(--aui-color-gray-400);
+    --aui-color-text-disabled: var(--aui-color-gray-600);
+    --aui-color-border: var(--aui-color-gray-800);
+    --aui-color-border-subtle: var(--aui-color-gray-700);
+    --aui-color-border-hover: var(--aui-color-gray-600);
+    --aui-color-focus-ring: rgba(59, 130, 246, 0.4);
+    --aui-color-focus-border: #60a5fa;
+
+    /* Elevated Dark Shadows */
+    --aui-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    --aui-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.5);
+    --aui-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.6);
+    --aui-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 8px 10px -6px rgba(0, 0, 0, 0.7);
+  }
+
+  /* ==========================================================================
+     Automatic System Preference (Opt-in via data-aui-theme="auto")
+     ========================================================================== */
+  @media (prefers-color-scheme: dark) {
+    [data-aui-theme="auto"] {
+      --aui-color-bg: var(--aui-color-gray-950);
+      --aui-color-bg-subtle: var(--aui-color-gray-900);
+      --aui-color-bg-muted: var(--aui-color-gray-800);
+      --aui-color-surface: var(--aui-color-gray-900);
+      --aui-color-surface-hover: var(--aui-color-gray-800);
+      --aui-color-text: var(--aui-color-gray-50);
+      --aui-color-text-muted: var(--aui-color-gray-400);
+      --aui-color-text-disabled: var(--aui-color-gray-600);
+      --aui-color-border: var(--aui-color-gray-800);
+      --aui-color-border-subtle: var(--aui-color-gray-700);
+      --aui-color-border-hover: var(--aui-color-gray-600);
+      --aui-color-focus-ring: rgba(59, 130, 246, 0.4);
+      --aui-color-focus-border: #60a5fa;
+
+      --aui-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+      --aui-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.5);
+      --aui-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.6);
+      --aui-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 8px 10px -6px rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+

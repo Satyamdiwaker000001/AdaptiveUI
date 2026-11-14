@@ -1,0 +1,10 @@
+/**
+ * AdaptiveUI Core Styles Bundle
+ *
+ * Opt-in all-in-one stylesheet for consuming applications.
+ * Includes design tokens and shared utilities.
+ */
+
+@import './tokens.css';
+@import './utilities.css';
+
